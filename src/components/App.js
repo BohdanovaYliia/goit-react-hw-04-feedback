@@ -31,16 +31,12 @@ export function App() {
     }
   }
 
-  const countTotalFeedback = () => {
-    return good + neutral + bad;
-  }
+  const totalFeedback = good + neutral + bad;
 
   const countPositiveFeedbackPercentage = () => {
-    const positiveFeedbackPercentage = good / (good + neutral + bad) * 100;
+    const positiveFeedbackPercentage = good / totalFeedback * 100;
     return Number.parseInt(positiveFeedbackPercentage);
   }
-  
-  const totalFeedback = countTotalFeedback();
  
   return (
       <div>
